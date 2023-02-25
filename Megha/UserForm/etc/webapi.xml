@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/user/add" method="POST">
+        <service class="Megha\UserForm\Api\UserFormManagementInterface" method="saveUser"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+    <route url="/V1/user/delete" method="GET">
+        <service class="Megha\UserForm\Api\UserFormManagementInterface" method="deleteUser"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+
+</routes>

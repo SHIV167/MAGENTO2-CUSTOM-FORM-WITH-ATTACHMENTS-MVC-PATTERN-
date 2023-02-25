@@ -1,0 +1,26 @@
+<?php
+/* @var \Megha\UserForm\Block\Detail $block */
+?>
+<legend class="legend"><span><?php echo __('User Information') ?></span></legend><br>
+<table>
+    <tr>
+        <th>First name</th>
+        <td><?= $block->getData("first_name") ?></td>
+    </tr>
+    <tr>
+        <th>Last name</th>
+        <td><?= $block->getData("last_name") ?></td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td><?= $block->getData("email") ?></td>
+    </tr>
+    <tr>
+        <th>Mobile</th>
+        <td><?= $block->getData("mobile") ?></td>
+    </tr>
+    <tr>
+        <th>Date of birth</th>
+        <td><?= $block->getData("dob") ?></td>
+    </tr>
+</table>

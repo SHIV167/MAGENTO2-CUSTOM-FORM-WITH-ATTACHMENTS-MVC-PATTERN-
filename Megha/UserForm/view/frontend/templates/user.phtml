@@ -1,0 +1,65 @@
+<?php
+/* @var \Megha\UserForm\Block\User $block */
+?>
+<div>
+    <!-- form tag -->
+    <form class="form" id="userform" method="post" autocomplete="off">
+
+        <fieldset class="fieldset">
+            <legend class="legend"><span><?php echo __('User Information') ?></span></legend><br>
+            <div class="field required">
+                <!-- form field -->
+
+                <label for="first_name" class="label"><span><?php echo __('First name') ?></span></label>
+                <div class="control">
+                    <input type="text" name="first_name" id="first_name" value="<?php echo $block->getData("first_name") ?>" title="<?php echo __('First name') ?>" class="input-text" data-validate="{required:true}">
+                </div>
+
+                <label for="last_name" class="label"><span><?php echo __('Last name') ?></span></label>
+                <div class="control">
+                    <input type="text" name="last_name" id="last_name" value="<?php echo $block->getData("last_name") ?>" title="<?php echo __('Last name') ?>" class="input-text" data-validate="{required:true}">
+                </div>
+
+                <label for="email" class="label"><span><?php echo __('Email') ?></span></label>
+                <div class="control">
+                    <input type="email" name="email" id="email" value="<?php echo $block->getData("email") ?>" title="<?php echo __('Email') ?>" class="input-text" data-validate="{required:true, 'validate-email':true}">
+                </div>
+
+                <label for="mobile" class="label"><span><?php echo __('Mobile') ?></span></label>
+                <div class="control">
+                    <input type="number" name="mobile" id="mobile" value="<?php echo $block->getData("mobile") ?>" title="<?php echo __('Mobile') ?>" class="input-text" data-validate="{required:true, 'integer':true, 'minlength':10, 'maxlength':12}">
+                </div>
+
+                <label for="dob" class="label"><span><?php echo __('Date of birth') ?></span></label>
+                <div class="control">
+                    <input type="date" name="dob" id="dob" value="<?php echo $block->getData("dob") ?>" title="<?php echo __('Date of birth') ?>" class="input-text" data-validate="{required:true, 'validate-date':true, 'dateFormat':'Y-m-d'}">
+                </div>
+
+                <input type="hidden" name="saveuser" value="true">
+
+            </div>
+        </fieldset>
+
+        <!-- submit button -->
+        <div class="actions-toolbar">
+            <div class="primary">
+                <button type="submit" class="action submit primary" title="<?php  echo __('Submit') ?>"><span><?php echo __('Submit') ?></span></button>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+<!-- enable javascript validation for custom-form-id -->
+<script type="text/x-magento-init">
+    {
+        "#userform": {
+            "validation": {}
+        }
+    }
+</script>
+<script>
+    require(['jquery', 'myscript'], function($, myscript) {
+        myscript();
+    });
+</script>
