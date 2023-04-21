@@ -4,4 +4,4 @@ Add email id in admin section from store -> configration -> general -> store ema
 
 And submit form you will get mail with attachment.
 
-MAGENTO2 EMAIL LOGIC URL => https://www.codextblog.com/magento-2/sending-custom-emails-using-custom-module-in-magento-2/
+MAGENTO2 HOW EMAIL TRIGGER LOGIC URL => https://www.codextblog.com/magento-2/sending-custom-emails-using-custom-module-in-magento-2/
